@@ -1,0 +1,45 @@
+#
+# Copyright (C) 2018 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+TARGET_SUPPORTS_OMX_SERVICE := false
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from device.mk
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
+
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+PRODUCT_NAME := lineage_pdx224
+PRODUCT_DEVICE := pdx224
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_BRAND := Sony
+PRODUCT_MODEL := Xperia 5 IV
+
+PRODUCT_SYSTEM_NAME := XQ-CQ54
+PRODUCT_SYSTEM_DEVICE := XQ-CQ54
+
+PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="XQ-CQ54-user 14 64.2.A.2.244 064002A002024400519766968 release-keys" \
+    BuildFingerprint="Sony/XQ-CQ54/XQ-CQ54:14/64.2.A.2.244/064002A002024400519766968:user/release-keys" \
+    DeviceName=$(PRODUCT_SYSTEM_NAME) \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
+    SystemDevice=$(PRODUCT_SYSTEM_NAME) \
+    SystemName=$(PRODUCT_SYSTEM_NAME)
