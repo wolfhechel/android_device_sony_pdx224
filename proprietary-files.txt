@@ -700,3 +700,12 @@ vendor/etc/wifi/wifi_txpower.conf
 vendor/etc/wifi/bdwlan.e8d;SYMLINK=vendor/firmware/bdwlan.e8d
 vendor/etc/wifi/bdwlang.e8d;SYMLINK=vendor/firmware/bdwlang.e8d
 vendor/etc/wifi/regdb.bin;SYMLINK=vendor/firmware/regdb.bin
+
+# Audio FX modules
+vendor/lib64/soundfx/libdnnrwrapper.so
+vendor/lib64/soundfx/libznrwrapper.so
+vendor/lib64/libznr.so
+vendor/lib64/librebuffering.so
+vendor/lib64/libaudiosnpewrapper.so
+vendor/lib64/libaudiosnpewrapper_context.so
+vendor/lib64/libaudiokeymgr.so
